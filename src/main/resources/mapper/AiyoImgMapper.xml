@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apiyoo.anthorization.swy.mapper.AiyoImgMapper">
+
+    <select id="queryUrlByAid" resultType="com.apiyoo.anthorization.swy.entity.AiyoImg">
+        select * from apiyoo_images where aid = #{aid}
+    </select>
+    <insert id="insertImgPathByAid">
+       insert into apiyoo_images (pid,imgurl,imgpress,aid)values (uuid(),#{imgUrl},#{imgpress},#{aid})
+    </insert>
+
+</mapper>

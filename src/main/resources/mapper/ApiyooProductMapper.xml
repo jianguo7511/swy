@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apiyoo.anthorization.swy.mapper.ApiyooProductMapper">
+
+    <!-- 通用查询映射结果 -->
+<!--    <resultMap id="BaseResultMap" type="com.apiyoo.anthorization.swy.entity.ApiyooProduct">-->
+<!--        <id column="productId" property="productId" />-->
+<!--        <result column="productName" property="productName" />-->
+<!--        <result column="productTitle" property="productTitle" />-->
+<!--        <result column="productPrice" property="productPrice" />-->
+<!--        <result column="productStatus" property="productStatus" />-->
+<!--        <result column="productStaName" property="productStaName" />-->
+<!--        <result column="producImgId" property="producImgId" />-->
+<!--        <result column="back1" property="back1" />-->
+<!--        <result column="back2" property="back2" />-->
+<!--        <result column="back3" property="back3" />-->
+<!--    </resultMap>-->
+    <select id="queryProductListByCateId" resultType="com.apiyoo.anthorization.swy.entity.ApiyooProduct">
+       select * from apiyoo_product as ap  left join product_category as pc
+         on ap.productCategory = pc.categoryCode
+         where ap.productCategory = #{productCategory}
+    </select>
+</mapper>

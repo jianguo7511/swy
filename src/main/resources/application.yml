@@ -1,0 +1,9 @@
+server:
+  port:8080
+spring:
+  profiles:
+    active: dev
+  mvc:
+    async:
+      request-timeout: 60000
+

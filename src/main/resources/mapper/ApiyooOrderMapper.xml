@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apiyoo.anthorization.swy.mapper.ApiyooOrderMapper">
+
+<!--    &lt;!&ndash; 通用查询映射结果 &ndash;&gt;-->
+<!--    <resultMap id="BaseResultMap" type="com.apiyoo.anthorization.swy.entity.ApiyooOrder">-->
+<!--        <id column="orderId" property="orderId" />-->
+<!--        <result column="receiver" property="receiver" />-->
+<!--        <result column="receiverTel" property="receiverTel" />-->
+<!--        <result column="province" property="province" />-->
+<!--        <result column="city" property="city" />-->
+<!--        <result column="area" property="area" />-->
+<!--        <result column="addrDetail" property="addrDetail" />-->
+<!--        <result column="fullAddr" property="fullAddr" />-->
+<!--        <result column="orderName" property="orderName" />-->
+<!--        <result column="remark" property="remark" />-->
+<!--        <result column="statusCode" property="statusCode" />-->
+<!--        <result column="statusName" property="statusName" />-->
+<!--        <result column="freight" property="freight" />-->
+<!--        <result column="quantity" property="quantity" />-->
+<!--        <result column="productAmount" property="productAmount" />-->
+<!--        <result column="productTotalSum" property="productTotalSum" />-->
+<!--        <result column="payAmount" property="payAmount" />-->
+<!--        <result column="distribution" property="distribution" />-->
+<!--        <result column="creatTime" property="creatTime" />-->
+<!--        <result column="delflag" property="delflag" />-->
+<!--        <result column="back1" property="back1" />-->
+<!--        <result column="back2" property="back2" />-->
+<!--        <result column="back3" property="back3" />-->
+<!--    </resultMap>-->
+
+</mapper>

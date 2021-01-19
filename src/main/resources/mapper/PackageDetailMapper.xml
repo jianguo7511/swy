@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apiyoo.anthorization.swy.mapper.PackageDetailMapper">
+
+<!--    &lt;!&ndash; 通用查询映射结果 &ndash;&gt;-->
+<!--    <resultMap id="BaseResultMap" type="com.apiyoo.anthorization.swy.entity.PackageDetail">-->
+<!--        <id column="pckdetaId" property="pckdetaId" />-->
+<!--        <result column="skuId" property="skuId" />-->
+<!--        <result column="skuName" property="skuName" />-->
+<!--        <result column="quantity" property="quantity" />-->
+<!--        <result column="packId" property="packId" />-->
+<!--        <result column="back1" property="back1" />-->
+<!--        <result column="back2" property="back2" />-->
+<!--        <result column="back3" property="back3" />-->
+<!--    </resultMap>-->
+
+</mapper>

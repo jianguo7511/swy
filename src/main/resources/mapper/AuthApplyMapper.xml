@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.apiyoo.anthorization.swy.mapper.AuthApplyMapper">
+
+    <select id="queryAuthApplyList" resultType="com.apiyoo.anthorization.swy.entity.AuthApply">
+       select * from (
+       select aid,apuser,suborg,orgname,subtime,applystatus from authorization_apply where orgname  like CONCAT('%',#{company_name},'%')
+           union
+       select aid,apuser,suborg,orgname,subtime,applystatus from authorization_apply where apuser  like CONCAT('%',#{apply_user},'%')) t  order by  t.subtime desc
+    </select>
+
+    <select id="queryAuthApplyOne" resultType="com.apiyoo.anthorization.swy.entity.AuthApply">
+     SELECT
+        aid,
+        comid,
+        orgaddress,
+        orgname,
+        classification,
+        creditcode,
+        legalperson,
+        contact,
+        phone,
+        authcode,
+        authtime,
+        remarks,
+        apuser,
+        suborg,
+        subtime,
+        updatetime,
+        applystatus,
+        approval,
+        refreason,
+        aptimeblock
+    FROM
+        authorization_apply
+    WHERE
+        aid=#{aid}
+    </select>
+
+    <select id="queryAuthApplyByProinsid" resultType="com.apiyoo.anthorization.swy.entity.AuthApply">
+     SELECT
+        aid,
+        comid,
+        orgaddress,
+        orgname,
+        classification,
+        creditcode,
+        legalperson,
+        contact,
+        phone,
+        authcode,
+        authtime,
+        remarks,
+        apuser,
+        suborg,
+        subtime,
+        updatetime,
+        applystatus,
+        approval,
+        refreason,
+        aptimeblock,
+        proinsid
+    FROM
+        authorization_apply
+    WHERE
+        proinsid=#{proinsid}
+    </select>
+
+    <update id="updateAuthApplyByPid">
+
+     update authorization_apply set
+        applystatus = #{applystatus},
+        refreason = #{refreason},
+        appstaname = #{appstaname}
+       where proinsid =#{proinsid}
+   </update>
+
+    <update id="updateAuthApplySuccessByPid">
+
+     update authorization_apply set
+        applystatus = #{applystatus},
+        refreason = #{refreason},
+        appstaname = #{appstaname},
+        aptimeblock = #{aptimeblock},
+        authcode = #{authcode},
+        authtime = #{authtime}
+       where proinsid =#{proinsid}
+   </update>
+
+    <select id="queryAuthedList" resultType="com.apiyoo.anthorization.swy.entity.AuthApply">
+        select  * from (
+        select * from authorization_apply where  creditcode = #{creditcode}
+            union
+        select * from authorization_apply where  orgname = #{orgname}
+        )t
+    </select>
+</mapper>
